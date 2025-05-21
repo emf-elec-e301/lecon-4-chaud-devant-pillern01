@@ -18,10 +18,14 @@
 //----------------------------------------------------------
 int main(void)
 {
+    uint8_t distance, abc;
     //----------------------------------------------------------
     // initialisation du microcontroleur
     SYSTEM_Initialize(); // NE PAS SUPPIRMER CETTE LIGNE DE CODE
     //----------------------------------------------------------
+{
+        
+}
     // VOTRE CODE CI-DESSOUS
     // INSTRUCTIONS EXECUTEES UNE SEULE FOIS AU DEMARRAGE
     //----------------------------------------------------------
@@ -31,7 +35,9 @@ int main(void)
         // VOTRE CODE CI-DESSOUS
         // INSTRUCTIONS EXECUTEES EN BOUCLE INDEFINIMENT
         //----------------------------------------------------------
-        
+        distance = ultrason_distance();
+        DELAY_milliseconds(200);
+        abc=distance;
     }
 }
 //----------------------------------------------------------
